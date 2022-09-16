@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Instagram</title>
+    <link rel="icon" href="instagram.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .hero
+        {
+            width: 100%;
+            height: min-height(100vh);
+            position: relative;
+            font-family: sans-serif;            
+        }
+        video
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        nav
+        {
+            width: 100%;
+            height: 15vh;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav h2
+        {
+            font-size: 3rem;
+            color: #fff;
+            margin-left: 10px;
+            transform: translateX(0%);
+            animation: space 1s ease-in-out;
+        }
+        @keyframes space
+        {
+            0%
+            {
+                transform: translateX(-100%);
+            }
+    
+            100%
+            {
+                transform: translateX(0%);
+            }
+
+        }
+        nav ul li
+        {
+            color: #fff;
+            list-style: none;
+            font-family: sans-serif;
+            font-size: 16px;
+            display: inline-block;
+            margin-left: 40px;
+            padding: 10px;
+            position: relative;
+            transform: translateY(0);
+            animation: space1 1.5s ease-in-out;
+        }
+        @keyframes space1
+        {
+            0%
+            {
+                transform: translateY(-220%);
+            }
+    
+            100%
+            {
+                transform: translateY(0%);
+            }
+
+        }
+        nav ul li::after
+        {
+            content: '';
+            width: 0;
+            height: 3px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+            background: white;
+        }
+        nav ul li:hover::after
+        {
+            width: 50%;
+        }
+        .content
+        {
+            height: 85vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .content h1
+        {
+            font-size: 200px; 
+            color: #fff;
+            font-weight: 600;
+            animation: h1 3s ease-in-out;
+        }
+        @keyframes h1
+        {
+            0%
+            {
+                color: transparent;
+                font-size: 100px;
+            }
+            100%
+            {
+                font-size: 200px;
+            }
+        }
+        .content h1:hover
+        {
+            -webkit-text-stroke: 2px #fff;
+            color: transparent;
+        }
+        .content a
+        {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 60px;
+        }
+        span{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <video autoplay muted loop plays-inline>
+            <source src="views.mp4">
+        </video>
+        <nav>
+            <h2> Instagram</h2>
+            <ul>
+                <li>Home</li>
+                <li>Social</li>
+                <li>Awards</li>
+                <li>Contact</li>
+                <li>About</li>
+                <li><span><i class="fa fa-user-circle" aria-hidden="true"></i></span></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Chennai</h1>
+            <br>
+            <a href="index.html">Explore</a>
+        </div>
+    </div>
+</body>
+</html>
+
